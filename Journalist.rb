@@ -19,15 +19,25 @@ def count_number
       end
     end
   end
-
   return i
+end
+
+
+def count_maj()
+    count = 0
+    @journalistes.each do |word|
+      if  ("A".."Z").include?(word[1])
+        count += 1
+      end
+    end
+    return count
 end
 
 def perform
 
   count_copie = count_name();
 
-  puts count_num
+  puts count_maj
 end
 
 perform
